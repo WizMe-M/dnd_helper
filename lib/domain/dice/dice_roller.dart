@@ -1,10 +1,13 @@
 import 'dart:math';
 
+import 'package:injectable/injectable.dart';
+
 import 'crit_handler.dart';
 import 'dice.dart';
 
 enum RollParam { once, disadvantage, advantage }
 
+@singleton
 class DiceRoller {
   final CritHandler critHandler;
 

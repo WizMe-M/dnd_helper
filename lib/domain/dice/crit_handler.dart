@@ -1,3 +1,5 @@
+import 'package:injectable/injectable.dart';
+
 import 'crit_checker.dart';
 
 abstract interface class CritHandler {
@@ -6,6 +8,7 @@ abstract interface class CritHandler {
 }
 
 /// Handler of critical rolls for Dice 20
+@Singleton(as: CritHandler)
 class D20CritHandler implements CritHandler {
   final CritChecker critChecker;
 
